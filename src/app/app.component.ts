@@ -6,12 +6,15 @@ import { GithubReposService } from './github-repos.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'GitSearch';
 
 
   githubRepos :any = [];
   constructor(private githubService: GithubReposService) {
+    
+  }
+  ngOnInit(): void {
     this.getRepos();
   }
 
