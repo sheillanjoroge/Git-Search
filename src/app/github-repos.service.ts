@@ -10,7 +10,7 @@ export class GithubReposService {
 
   constructor(private http: HttpClient) { }
 
-  getRepo() {
+  getGithubPublicRepos() {
     const username= "sheillanjoroge";
     return this.http.get('https://api.github.com/users/${username}/repos');
   }

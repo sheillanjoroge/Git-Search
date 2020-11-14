@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GithubReposService } from './github-repos.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GitSearch';
+
+
+  githubRepos = [];
+  constructor(private githubService: GithubReposService) {}
+
+  getRepos(){
+    this.githubService.getGithubPublicRepos().subscribe(repos => {
+
+    });
+    
+  }
 }
