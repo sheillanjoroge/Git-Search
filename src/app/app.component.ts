@@ -10,13 +10,16 @@ export class AppComponent {
   title = 'GitSearch';
 
 
-  githubRepos = [];
-  constructor(private githubService: GithubReposService) {}
+  githubRepos :any = [];
+  constructor(private githubService: GithubReposService) {
+    this.getRepos();
+  }
 
   getRepos(){
     this.githubService.getGithubPublicRepos().subscribe(repos => {
+      this.githubRepos = repos;
 
     });
-    
+
   }
 }
