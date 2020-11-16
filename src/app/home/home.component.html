@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
     <div class="card mt-5"  *ngIf='user'>
         <div class="title">
             <ul>
@@ -6,10 +6,46 @@
                <span class="material-icons book-icon">book</span><li><a (click)='navigateRepos()' appSelected> Repositories</a></li>
             </ul>
         </div>
+        <div class="row">
+            <div class="col-sm-1 body-div">
+                <div class="profile">
+                    <img src="{{ user.avatar_url }}" class=" profile-icon">
+                </div>
+            </div>
+            <div class="col username">
+                {{ user.name }}
+            </div>
+        </div>
+        <div class="row description-div">
+            <div class="col">
+                {{ user.bio }}
+            </div>
+        </div>
+        <div class="row people">
+            <div class="col col-sm-2">
+                <span class="material-icons people-icon">people_outline</span>
+                <span class="small-txt"> {{user.followers }} Followers</span> 
+            </div>
+            <div class="col col-sm-2">
+                <span class="material-icons person-icon">person_outline</span>
+                <span class="small-txt">{{ user.following }} Following</span> 
+            </div>
+            <div class="col col-sm-2">
+                <span class="material-icons business-icon">public</span>
+                <span class="small-txt">{{ user.public_repos }}repos </span> 
+            </div>
+        </div>
+    </div>
+    <div *ngIf='!user' class="nada">
+        <p>No Results found here</p>
+        <img src="./assets/nada.svg" alt="">
+        <div>
+            <a href="/home">
+                <button class="btn btn-success">Go Home</button>
+             </a>
+        </div>
     </div>
 </div>
- -->
-
 
 
 
