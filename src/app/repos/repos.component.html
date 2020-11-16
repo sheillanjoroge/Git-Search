@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="card mt-5">
+        <div class="title">
+            <ul>
+                <span class="material-icons home-icon">home</span><li><a (click)='navigateHome()'> Home</a></li>
+                <span class="material-icons book-icon">book</span><li><a class="repos-select" (click)='navigateRepos()'> Repositories</a></li>
+            </ul>
+        </div>
+        <div class="repos-title mt-3 mt-sm-0" *ngIf='repos'>
+            <p>{{ repos[0].owner.login }}'s Repositories</p>
+        </div>
+        <div class="row ml-1 ml-sm-0" *ngIf='repos'>
+            <div class="ml-4 mr-4 mb-4 col-10 col-sm-5" *ngFor='let repo of repos'>
+                <div class="card">
+                    <div class="row ml-3 mt-3">
+                        <div class="col repo-name">
+                            {{repo.name}}
+                        </div>
+                    </div>
+                    <div class="row ml-3 mt-2">
+                        <div class="col">
+                            {{repo.description}}
+                        </div>
+                    </div>
+                    <div class="row ml-3 mt-2 mb-2">
+                        <div class="col-4">
+                            <span class="material-icons tech">military_tech</span>
+                            {{repo.language}}
+                        </div>
+                        <div class="col">
+                            <span class="material-icons stars">star_rate</span>
+                            {{ repo.stargazers_count}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+
+        <div class="repos-title mt-3 mt-sm-0" *ngIf='repository'>
+            <p>Repositories found</p>
+
+        </div>
+        <div class="row ml-1 ml-sm-0" *ngIf='repository;'>
+            <div class="ml-4 mr-4 mb-4 col-10 col-sm-5">
+                <div class="card">
+                    <div class="row ml-3 mt-3">
+                        <div class="col">
+                            {{repository.name}}
+                        </div>
+                    </div>
+                    <div class="row ml-3 mt-2">
+                        <div class="col">
+                            {{repository.description}}
+                        </div>
+                    </div>
+                    <div class="row ml-3 mt-2 mb-2">
+                        <div class="col-4">
+                            <span class="material-icons tech">military_tech</span>
+                            {{repository.language}}
+                        </div>
+                        <div class="col">
+                            <span class="material-icons stars">star_rate</span>
+                            {{ repository.stargazers_count}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div *ngIf='repos == undefined'>
+            <div class="nada" *ngIf='!repository'>
+                <p>No Results found here</p>
+                <img src="./assets/nada.svg" alt="">
+                <div>
+                    <a href="/repositories">
+                        <button class="btn btn-success">Home</button>
+                     </a>
+                </div>
+            </div>
+        </div>
+            
+        
+        
+    </div>
+</div>

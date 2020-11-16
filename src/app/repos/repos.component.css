@@ -1,0 +1,81 @@
+.title a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.title a:visited{
+    color: initial;
+}
+.title a:hover{
+    border-bottom: 1.5px solid lightgray;
+    padding-bottom: 4px;
+}
+ul{
+    list-style: none;
+    float: right;
+}
+ul li{
+    text-decoration: none;
+    display: inline;
+    margin-right: 20px;   
+}
+.repos-title{
+    text-align: center;
+    font-size: 24px;
+}
+.repo-name{
+    color: #133770;
+    font-weight: bold;
+    font-size: 16px;
+}
+.tech, .stars, .home-icon, .book-icon{
+    font-size: 16px;
+    vertical-align: middle;
+    color: #133770;
+}
+.home-icon, .book-icon{
+    cursor: pointer;
+}
+.repos-select{
+    padding-bottom: 3%;
+    border-bottom: 1px solid #eb7222;
+}
+.nada img{
+    width: 50%;
+    margin-left: 25%;
+}
+.nada p{
+    text-align: center;
+    font-size: 24px;
+    color: #133770 ;
+}
+
+.btn-success{
+    background-color: #133770;
+    border-color: #133770;
+    color: white;
+    margin-left: 40%;
+}
+.btn-success a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (min-width: 768px){
+    .repos-title{
+        text-align: center;
+        font-size: 36px;
+    }
+    .btn-success{
+        background-color: #133770;
+        border-color: #133770;
+        color: white;
+        margin-left: 45%;
+    }
+    .btn-success a:hover{
+        text-decoration: none;
+        color: white;
+        color: #193c73;
+    
+    }
+    
+}
