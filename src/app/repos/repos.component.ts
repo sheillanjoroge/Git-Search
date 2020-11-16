@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { GithubService } from '../github/github.service';
 
-import { Repo } from '../repo'
+import { Repos } from '../repos'
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
@@ -18,7 +18,7 @@ export class ReposComponent implements OnInit {
   ngOnInit(): void {
     if(this.githubService.getSearchedRepoTerm() == undefined){
       if(this.githubService.getRepo() == undefined){
-        this.reposLink = 'https://api.github.com/users/GrishonNganga/repos'
+        this.reposLink = 'https://api.github.com/users/sheillanjoroge/repos'
         this.displayRepos()
       }else{
       this.reposLink = this.githubService.getRepo()
