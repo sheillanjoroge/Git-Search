@@ -1,0 +1,24 @@
+<nav class="navbar bg-navy-blue">
+    <div class="row navbar-lg">
+        <div class="col col-sm-1">
+            <a class="navbar-brand" href="home"><img src="./assets/blu-logo.png" alt=""></a>
+        </div>
+        <div class="col col-sm-4">
+            <form #searchGithubForm='ngForm'>
+                <input name='searchTerm'(keyup.enter)='searchGithub(searchGithubForm)' class="form-control nav-search-lg mt-2" type="text" placeholder="{{searchText}}" aria-label="Search" ngModel>
+            </form>
+        </div>
+    </div>
+    <div class="row navbarr">
+        <div class="col-5">
+            <span class="material-icons nav-menu" id="menu-icon" (click)='dropdownMenu()'>menu</span>
+        </div>
+        <div class="col nav-logo">
+            <a class="navbar-brand" href="#"><img src="./assets/blu-logo.png" alt=""></a>
+        </div>
+        <div  *ngIf='showDiv'  class="row nav-input-div">
+            <div class="col">
+                <form>
+                    <input class="form-control nav-search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
