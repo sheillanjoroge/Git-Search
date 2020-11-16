@@ -1,4 +1,4 @@
-import { Repos } from './repos';
+import { Repo } from './repos';
 
 describe('Repos', () => {
   it('should create an instance', () => {

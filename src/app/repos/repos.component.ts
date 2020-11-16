@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { GithubService } from '../github/github.service';
 
-import { Repos } from '../repos'
+import { Repo } from '../repos'
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
